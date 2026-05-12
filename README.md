@@ -72,6 +72,11 @@ This project uses browser localStorage instead of a traditional database for sim
 
 The application is deployed using Vercel.
 
+## Notes
+
+- This project uses the Gemini API for receipt data extraction.
+- Free-tier Gemini API usage may be subject to daily or rate limitations depending on Google AI Studio quotas.
+
 ## Author
 
 Muhammad Alif Altaf
