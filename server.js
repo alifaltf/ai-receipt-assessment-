@@ -2,6 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const path = require("path");
 const { GoogleGenAI } = require("@google/genai");
 
 dotenv.config();
@@ -11,10 +12,15 @@ const upload = multer({ storage: multer.memoryStorage() });
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+
+app.use(express.static(path.join(__dirname, "public")));
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.post("/extract", upload.single("receipt"), async (req, res) => {
