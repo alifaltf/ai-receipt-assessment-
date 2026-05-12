@@ -29,4 +29,4 @@ A simple AI-powered web application that extracts receipt information from uploa
 Clone the repository:
 
 ```bash
-git clone (https://github.com/alifaltf/ai-receipt-assessment-)
+git clone https://github.com/alifaltf/ai-receipt-assessment-
