@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Receipt AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Receipt AI Extractor</h1>
+
+    <input type="file" id="receiptImage">
+    <button onclick="uploadReceipt()">Extract Receipt</button>
+
+    <form id="receiptForm">
+      <input type="text" id="merchantName" placeholder="Merchant Name">
+      <input type="text" id="date" placeholder="Date">
+      <input type="text" id="totalAmount" placeholder="Total Amount">
+      <input type="text" id="currency" placeholder="Currency">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
